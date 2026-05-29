@@ -1,1 +1,41 @@
+header{
+    height: 120px;
+    background-image: url(imagenes/banner.jpg);
+    background-size: cover;       /* Cubre todo el espacio */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat;
+}
 
+body {
+    background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+aside{
+    width: 300px;
+    height: 400px;
+    background-image: url("../imagenes/logo.png");
+    background-size: 300px;
+    position: absolute;
+}
+
+.grid{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+main{
+    width: 850px;
+    height: auto;
+    background-color: blue;
+    border: 4px double red;
+    color: aqua;
+
+    margin-left: 315px;
+    padding: 10px;
+}
