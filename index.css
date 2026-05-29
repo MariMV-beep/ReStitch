@@ -1,19 +1,48 @@
-header{
-    height: 120px;
-    background-image: url(imagenes/banner.jpg);
-    background-size: cover;       /* Cubre todo el espacio */
-    background-position: center;  /* Centra la imagen */
-    background-repeat: no-repeat;
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 60px;
+    width: auto;
+    background-color: rgb(30, 24, 42);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+#textoH {
+    padding-top: 2.5px;
+    display: inline-flex;
+    padding-right: 30px;
+    text-decoration: none;
+    color: rgb(206, 191, 233);
+    gap: 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#textoH:hover {
+    color: rgb(184, 119, 198);
+}
+
+#logoH {
+    padding-top: 2.5px;
+    height: 50px;
+    padding-right: 1000px;
+}
+
+#set {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 body {
-    background-image: url("../imagenes/fondo.jpg");
+    background-image: url("imagenes/fondo.jpg");
     background-size: cover;
     background-attachment: scroll;
-    -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
 }
 
-aside{
+aside {
     width: 300px;
     height: 400px;
     background-image: url("../imagenes/logo.png");
@@ -21,7 +50,7 @@ aside{
     position: absolute;
 }
 
-.grid{
+.grid {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -29,7 +58,7 @@ aside{
     flex-wrap: wrap;
 }
 
-main{
+main {
     width: 850px;
     height: auto;
     background-color: blue;
@@ -38,4 +67,22 @@ main{
 
     margin-left: 315px;
     padding: 10px;
+}
+
+#caja{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-borroso {
+    background: rgba(255, 255, 255, 0.093);
+    backdrop-filter: blur(5px);
+    /* Aplica el efecto borroso*/
+    -webkit-backdrop-filter: blur(5px);
+    /* Compatibilidad con Safari */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(83, 31, 135, 0.37);
+    color: white;
+    width: 300px;
 }
