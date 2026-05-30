@@ -3,6 +3,7 @@
     padding: 0px;
 }
 
+
 header {
     height: 60px;
     width: auto;
@@ -22,6 +23,7 @@ header {
 
 #textoH:hover {
     color: rgb(184, 119, 198);
+    transform: rotate(5deg);
 }
 
 #logoH {
@@ -37,9 +39,42 @@ header {
 }
 
 body {
+    cursor: url(imagenes/cursor.png), auto;
     background-image: url("imagenes/fondo.jpg");
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
+}
+
+a {
+    cursor: url(imagenes/cursorH.png), auto;
+}
+
+#caja {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-borroso {
+    background: rgba(255, 255, 255, 0.093);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    /* Aplica el efecto borroso*/
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(83, 31, 135, 0.37);
+    color: rgb(255, 255, 255);
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#bolso {
+    width: 300px;
+    border-radius: 20px;
+
 }
 
 aside {
@@ -51,6 +86,8 @@ aside {
 }
 
 .grid {
+    padding-bottom: 80px;
+    padding-top: 80px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -61,28 +98,179 @@ aside {
 main {
     width: 850px;
     height: auto;
-    background-color: blue;
-    border: 4px double red;
-    color: aqua;
+    background-color: rgb(146, 96, 158);
+    border: 15px double rgb(107, 71, 140);
+    color: rgb(255, 255, 255);
 
     margin-left: 315px;
-    padding: 10px;
+    padding: 20px;
 }
 
-#caja{
+.page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#contenedor1 {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-right: 300px;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+#contenedor1 .texto {
+    flex: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#contenedor1 h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffe066;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+#contenedor1 p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+}
+
+
+#contenedor2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+#contenedor2 h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffe066;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+#contenedor2 p {
+    font-size: 18px;
+    color: white;
+    opacity: 0.9;
+}
+
+.cuerdaUP {
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+}
+
+/* TENDEDERO DE FOTOS */
+.tendedero {
+    position: relative;
+    padding: 20px 0 10px;
+}
+
+.cuerda {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+}
+
+.fotos-row {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
 }
-.contenedor-borroso {
-    background: rgba(255, 255, 255, 0.093);
-    backdrop-filter: blur(5px);
-    /* Aplica el efecto borroso*/
-    -webkit-backdrop-filter: blur(5px);
-    /* Compatibilidad con Safari */
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 8px 32px 0 rgba(83, 31, 135, 0.37);
+
+.foto-polaroid {
+    width: 105px;
+    background: white;
+    border-radius: 4px;
+    padding: 5px 5px 18px;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.foto-polaroid:nth-child(1) {
+    transform: rotate(-4deg);
+}
+
+.foto-polaroid:nth-child(2) {
+    transform: rotate(2deg);
+    margin-top: 10px;
+}
+
+.foto-polaroid:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+.foto-polaroid .clip {
+    width: 10px;
+    height: 16px;
+    background: #b0a0c8;
+    border-radius: 3px;
+    margin: -18px auto 6px;
+    display: block;
+}
+
+.foto-polaroid .imagen-slot {
+    width: 100%;
+    height: 75px;
+    background: #d8cfe8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #7b5ea7;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.foto-polaroid .imagen-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mision-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.card-mv {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 1rem 0.8rem;
+}
+
+.card-mv h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffe066;
+    font-style: italic;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+.card-mv p {
+    font-size: 11px;
+    line-height: 1.6;
     color: white;
-    width: 300px;
 }
