@@ -81,3 +81,5 @@ document.getElementById('prev').onclick=()=>go(cur-1);
 document.getElementById('next').onclick=()=>go(cur+1);
 buildStage();
 buildDots();
+
+
