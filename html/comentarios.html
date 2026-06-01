@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/ReStitch/imagenes/logo.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ReStitch/css/comentarios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <script src="/ReStitch/js/comentarios.js"></script>
+    <title>Contacto</title>
+</head>
+
+<header>
+    <section id="set">
+        <div>
+            <img id="logoH" src="/ReStitch/imagenes/logopro.png">
+        </div>
+        <div>
+            <h3>
+                <lo><a id="textoH" href="/ReStitch/index.html">Inicio</a><a id="textoH"
+                        href="/ReStitch/html/catalogo.html">Catálogo</a> <a id="textoH"
+                        href="/ReStitch/html/comentarios.html">Contacto</a></lo>
+            </h3>
+        </div>
+    </section>
+</header>
+
+<body>
+    <div id="Container1">
+        <div>
+            <img id="titulo" src="/ReStitch/imagenes/nombre.png" width="340px" height="130px">
+        </div>
+        <div class="Container">
+            <form action="/procesar-datos" method="post">
+                <label for="Pais">Ubicacion(Pais):</label>
+                <input placeholder="ej: Costa Rica" type="text" id="Pais" name="Pais" required>
+                <label for="Nombre">Nombre:</label>
+                <input placeholder="ej: Juan" type="text" id="Nombre" name="Nombre" required>
+                <label for="Apellido">Apellido:</label>
+                <input placeholder="ej: Guitierrez" type="text" id="Apellido" name="Apellido" required>
+                <br>
+                <label for="NumTel">Numero de telefono:</label>
+                <input placeholder="ej: +506 0000 0000" type="text" id="NumTel" name="NumTel" required>
+            </form>
+        </div>
+    </div>
+    
+</body>
+<footer></footer>
+
+</html>
