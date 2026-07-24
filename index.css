@@ -304,32 +304,31 @@ main {
     text-align: justify;
 }
 
-/* POLAROID */
-#polaroid{
-    position:absolute;
-    top:35%;
-    right:3%;
-    width:clamp(180px, 28vw, 500px);
-    transform:rotate(10deg);
-    z-index:10;
+#polaroid {
+    position: absolute;
+    /* Permite moverlo libremente sobre el contenedor */
+    top: 600px;
+    right: 250px;
+    width: 505px;
+    z-index: 10;
+    /* Asegura que la imagen flote por encima del texto */
+    transform: rotate(10deg);
 }
 
-/* FLOR AMARILLA */
-#flor{
-    position:absolute;
-    top:28%;
-    left:58%;
-    width:clamp(100px, 14vw, 250px);
-    z-index:10;
+#flor {
+    position: absolute;
+    top: 500px;
+    right: 950px;
+    width: 350px;
+    z-index: 10;
 }
 
-/* FLOR INFERIOR */
-#flor2{
-    position:absolute;
-    bottom:4%;
-    right:2%;
-    width:clamp(100px, 14vw, 220px);
-    z-index:10;
+#flor2 {
+    position: absolute;
+    top: 1700px;
+    right: 110px;
+    width: 350px;
+    z-index: 10;
 }
 
 #contacto {
@@ -390,22 +389,25 @@ footer p {
         gap: 20px;
     }
 
-#polaroid{
-        width:clamp(180px,32vw,350px);
-        right:1%;
-        top:40%;
+    #polaroid {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 60%;
+        max-width: 400px;
+        margin: 20px auto;
+        display: block;
     }
 
-    #flor{
-        width:clamp(90px,15vw,180px);
-        left:54%;
-        top:32%;
-    }
-
-    #flor2{
-        width:clamp(90px,15vw,170px);
-        right:0;
-        bottom:2%;
+    #flor,
+    #flor2 {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 45%;
+        max-width: 250px;
+        margin: 10px auto;
+        display: block;
     }
 
     #contacto {
@@ -495,21 +497,10 @@ footer p {
         margin-right: 5px;
     }
 
-    #polaroid{
-        width:180px;
-        right:-20px;
-        top:48%;
-    }
-
-    #flor{
-        width:90px;
-        left:60%;
-        top:35%;
-    }
-
-    #flor2{
-        width:90px;
-        right:-10px;
-        bottom:0;
+    #polaroid,
+    #flor,
+    #flor2 {
+        width: 70%;
+        max-width: 220px;
     }
 }
