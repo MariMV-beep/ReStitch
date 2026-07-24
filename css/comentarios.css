@@ -115,7 +115,7 @@ input[type="text"]:focus {
     height: 300px;
 }
 
-input[type="submit"] {
+button {
     display: block;
     margin: 24px auto 0;
     background: #D4E4FF;
@@ -128,7 +128,7 @@ input[type="submit"] {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background: #bdd3ff;
 }
 
