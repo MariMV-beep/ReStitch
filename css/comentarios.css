@@ -67,7 +67,7 @@ a {
 }
 
 #Container1 {
-    background-color: rgb(146, 96, 158);
+    background-image: linear-gradient(rgb(174, 121, 187), rgb(134, 87, 146));
     border: 15px double rgb(107, 71, 140);
     padding: 30px 28px 36px;
     width: 100%;
@@ -95,7 +95,7 @@ label {
     font-size: 20px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"] {
     width: 100%;
     padding: 10px 16px;
     border: none;
@@ -111,20 +111,25 @@ input[type="text"]:focus {
     background: #c8ccd6;
 }
 
+#comentario{
+    height: 300px;
+}
+
 input[type="submit"] {
     display: block;
     margin: 24px auto 0;
-    background: #e84e2a;
-    color: white;
+    background: #D4E4FF;
+    color: rgb(107, 71, 140);
     border: none;
     border-radius: 20px;
     padding: 11px 40px;
     font-size: 15px;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input[type="submit"]:hover {
-    background: #c93d1e;
+    background: #bdd3ff;
 }
 
 footer {
