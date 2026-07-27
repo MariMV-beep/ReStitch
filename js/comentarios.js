@@ -1,13 +1,25 @@
-function sendMail(){
-  let parms = {
-    name: document.getElementById("nombre").value,
-    name: document.getElementById("email").value,
-    name: document.getElementById("comentario").value,
-  }
+function sendMail() {
 
-  emailjs.send("service_1v906cj", "template_rjnmlmh",parms).then(alert("Comentario enviado!!"))
+    let params = {
+        nombre: document.getElementById("nombre").value,
+        correo: document.getElementById("correo").value,
+        comentario: document.getElementById("comentario").value
+    };
+
+    console.log("Datos enviados:", params);
+
+    emailjs.send(
+        "service_z2b70g9",
+        "template_8qhyfq2",
+        params
+    )
+    .then(function (response) {
+        console.log("Éxito:", response);
+        alert("Comentario enviado correctamente.");
+    })
+    .catch(function (error) {
+        console.error("Error completo:", error);
+        alert("Error: " + error.text);
+    });
+
 }
-
-
-
-
