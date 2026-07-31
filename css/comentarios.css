@@ -43,8 +43,8 @@ header {
 
 
 body {
-    cursor: url(/ReStitch/imagenes/cursor.png), auto;
-    background-image: url("/ReStitch/imagenes/fondo.jpg");
+    cursor: url(../imagenes/cursor.png), auto;
+    background-image: url("../imagenes/fondo.jpg");
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
@@ -56,7 +56,7 @@ body {
 }
 
 a {
-    cursor: url(/ReStitch/imagenes/cursorH.png), auto;
+    cursor: url(../imagenes/cursorH.png), auto;
 }
 
 #titulo{
