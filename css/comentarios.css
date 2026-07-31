@@ -173,6 +173,10 @@ footer {
         gap:12px;
         padding:10px;
     }
+    
+    #Container1{
+        margin-top:100px;
+    }
 
     #logoH{
         height:42px;
@@ -184,7 +188,9 @@ footer {
     }
     
     #titulo{
-    margin-left: 10%;
+    margin-left: 6%;
+    width: 100%;
+    }
 }
 
     #Container1{
