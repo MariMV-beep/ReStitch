@@ -132,6 +132,7 @@ button {
 
 button:hover {
     background: #bdd3ff;
+    border: 2px solid rgb(107, 71, 140);
 }
 
 footer {
@@ -188,8 +189,8 @@ footer {
     }
     
     #titulo{
-    margin-left: 6%;
-    width: 100%;
+    margin-left: 15%;
+    padding-left: 0%;
     }
 }
 

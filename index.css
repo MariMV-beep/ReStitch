@@ -29,18 +29,18 @@ header {
 #logoH {
     padding-top: 2.5px;
     height: 50px;
-    padding-right:0;
+    padding-right: 0;
 }
 
-#set{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    width:100%;
-    max-width:1400px;
-    height:100%;
-    margin:0 auto;
-    padding:0 30px;
+#set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
 
@@ -49,6 +49,7 @@ body {
     background-image: url("imagenes/fondo.jpg");
     background-size: cover;
     background-attachment: fixed;
+        overflow-x: hidden;
 }
 
 a {
@@ -110,13 +111,16 @@ aside {
 }
 
 main {
+    position: relative;
+
     width: 850px;
     background-image: linear-gradient(rgb(174, 121, 187), rgb(134, 87, 146));
     border: 15px double rgb(107, 71, 140);
-    color: rgb(255, 255, 255);
+    color: white;
 
     margin-left: 315px;
     padding: 20px;
+
 }
 
 .page {
@@ -311,28 +315,32 @@ main {
 
 #polaroid {
     position: absolute;
-    /* Permite moverlo libremente sobre el contenedor */
-    top: 600px;
-    right: 250px;
-    width: 505px;
-    z-index: 10;
-    /* Asegura que la imagen flote por encima del texto */
+    width: 500px;
+
+    top: -15px;
+    right: -80px;
+
     transform: rotate(10deg);
+    z-index: 10;
 }
 
 #flor {
     position: absolute;
-    top: 500px;
-    right: 950px;
-    width: 350px;
+    width: 300px;
+
+    top: -100px;
+    left: -100px;
+
     z-index: 10;
 }
 
 #flor2 {
     position: absolute;
-    top: 1700px;
-    right: 110px;
-    width: 350px;
+    width: 300px;
+
+    bottom: -100px;
+    right: -150px;
+
     z-index: 10;
 }
 
@@ -422,20 +430,41 @@ footer p {
 }
 
 /* Móviles (hasta 600px) */
-@media (max-width: 600px) {
-    #set {
-        justify-content: center;
-        text-align: center;
+@media (max-width: 1000px) {
+    header{
+        height:auto;
+        padding:10px 0;
     }
 
-    #textoH {
-        padding-right: 0;
-        font-size: 14px;
+    #set{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        padding:10px;
+    }
+    
+    #Container1{
+        margin-top:100px;
+    }
+
+    #logoH{
+        height:42px;
+    }
+
+    #textoH{
+        font-size:16px;
+        padding-right:15px;
     }
 
     .contenedor-borroso {
         width: 100%;
         padding: 20px;
+    }
+
+    #flor,
+    #flor2,
+    #polaroid {
+        display: none;
     }
 
     #bolso {
@@ -445,8 +474,11 @@ footer p {
 
     main {
         width: 100%;
-        border-width: 8px;
+        max-width: 100%;
+        margin: 0 auto;
         padding: 12px;
+        border-width: 8px;
+        box-sizing: border-box;
     }
 
     .grid {
@@ -455,14 +487,14 @@ footer p {
         justify-content: center;
     }
 
-    #contenedor1 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 1rem;
-    }
+#contenedor1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
     #contenedor1 h2 {
         font-size: 22px;
