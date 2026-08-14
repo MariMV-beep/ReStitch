@@ -5,8 +5,8 @@
 
 
 header {
+    width: 100%;
     height: 60px;
-    width: auto;
     background-color: rgb(30, 24, 42);
     -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
 }
@@ -29,21 +29,27 @@ header {
 #logoH {
     padding-top: 2.5px;
     height: 50px;
-    padding-right:0;
+    padding-right: 0;
 }
 
 #set {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
 }
+
 
 body {
     cursor: url(imagenes/cursor.png), auto;
     background-image: url("imagenes/fondo.jpg");
     background-size: cover;
     background-attachment: fixed;
+        overflow-x: hidden;
 }
 
 a {
@@ -105,13 +111,16 @@ aside {
 }
 
 main {
+    position: relative;
+
     width: 850px;
     background-image: linear-gradient(rgb(174, 121, 187), rgb(134, 87, 146));
     border: 15px double rgb(107, 71, 140);
-    color: rgb(255, 255, 255);
+    color: white;
 
     margin-left: 315px;
     padding: 20px;
+
 }
 
 .page {
@@ -304,32 +313,35 @@ main {
     text-align: justify;
 }
 
-/* POLAROID */
-#polaroid{
-    position:absolute;
-    top:35%;
-    right:3%;
-    width:clamp(180px, 28vw, 500px);
-    transform:rotate(10deg);
-    z-index:10;
+#polaroid {
+    position: absolute;
+    width: 500px;
+
+    top: -15px;
+    right: -80px;
+
+    transform: rotate(10deg);
+    z-index: 10;
 }
 
-/* FLOR AMARILLA */
-#flor{
-    position:absolute;
-    top:28%;
-    left:58%;
-    width:clamp(100px, 14vw, 250px);
-    z-index:10;
+#flor {
+    position: absolute;
+    width: 300px;
+
+    top: -100px;
+    left: -100px;
+
+    z-index: 10;
 }
 
-/* FLOR INFERIOR */
-#flor2{
-    position:absolute;
-    bottom:4%;
-    right:2%;
-    width:clamp(100px, 14vw, 220px);
-    z-index:10;
+#flor2 {
+    position: absolute;
+    width: 300px;
+
+    bottom: -100px;
+    right: -150px;
+
+    z-index: 10;
 }
 
 #contacto {
@@ -390,22 +402,25 @@ footer p {
         gap: 20px;
     }
 
-#polaroid{
-        width:clamp(180px,32vw,350px);
-        right:1%;
-        top:40%;
+    #polaroid {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 60%;
+        max-width: 400px;
+        margin: 20px auto;
+        display: block;
     }
 
-    #flor{
-        width:clamp(90px,15vw,180px);
-        left:54%;
-        top:32%;
-    }
-
-    #flor2{
-        width:clamp(90px,15vw,170px);
-        right:0;
-        bottom:2%;
+    #flor,
+    #flor2 {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 45%;
+        max-width: 250px;
+        margin: 10px auto;
+        display: block;
     }
 
     #contacto {
@@ -415,20 +430,41 @@ footer p {
 }
 
 /* Móviles (hasta 600px) */
-@media (max-width: 600px) {
-    #set {
-        justify-content: center;
-        text-align: center;
+@media (max-width: 1000px) {
+    header{
+        height:auto;
+        padding:10px 0;
     }
 
-    #textoH {
-        padding-right: 0;
-        font-size: 14px;
+    #set{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        padding:10px;
+    }
+    
+    #Container1{
+        margin-top:100px;
+    }
+
+    #logoH{
+        height:42px;
+    }
+
+    #textoH{
+        font-size:16px;
+        padding-right:15px;
     }
 
     .contenedor-borroso {
         width: 100%;
         padding: 20px;
+    }
+
+    #flor,
+    #flor2,
+    #polaroid {
+        display: none;
     }
 
     #bolso {
@@ -438,8 +474,11 @@ footer p {
 
     main {
         width: 100%;
-        border-width: 8px;
+        max-width: 100%;
+        margin: 0 auto;
         padding: 12px;
+        border-width: 8px;
+        box-sizing: border-box;
     }
 
     .grid {
@@ -448,14 +487,14 @@ footer p {
         justify-content: center;
     }
 
-    #contenedor1 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 1rem;
-    }
+#contenedor1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
     #contenedor1 h2 {
         font-size: 22px;
@@ -495,21 +534,10 @@ footer p {
         margin-right: 5px;
     }
 
-    #polaroid{
-        width:180px;
-        right:-20px;
-        top:48%;
-    }
-
-    #flor{
-        width:90px;
-        left:60%;
-        top:35%;
-    }
-
-    #flor2{
-        width:90px;
-        right:-10px;
-        bottom:0;
+    #polaroid,
+    #flor,
+    #flor2 {
+        width: 70%;
+        max-width: 220px;
     }
 }

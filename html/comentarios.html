@@ -3,35 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/ReStitch/imagenes/logo.png" type="image/png" />
+    <link rel="icon" href="../imagenes/logo.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ReStitch/css/comentarios.css">
+    <link rel="stylesheet" href="../css/comentarios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <script src="../ReStitch/js/comentarios.js"></script>
+    <script src="../js/comentarios.js"></script>
     <title>Contacto</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init({
+            publicKey: "SSxJpFbjc6gqtPjHH"
+        });
     </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "E6KHTSEH7fOvqGGUD",
-            });
-        })();
-    </script>
+    
+
 </head>
 
 <header>
     <section id="set">
         <div>
-            <img id="logoH" src="/ReStitch/imagenes/logopro.png">
+            <img id="logoH" src="../imagenes/logopro.png">
         </div>
         <div>
             <h3>
-                <lo><a id="textoH" href="/ReStitch/index.html">Inicio</a><a id="textoH"
-                        href="/ReStitch/html/catalogo.html">Catálogo</a> <a id="textoH"
-                        href="/ReStitch/html/comentarios.html">Contacto</a></lo>
+                <lo><a id="textoH" href="../index.html">Inicio</a><a id="textoH"
+                        href="../html/catalogo.html">Catálogo</a> <a id="textoH"
+                        href="../html/comentarios.html">Contacto</a></lo>
             </h3>
         </div>
     </section>
@@ -40,19 +40,23 @@
 <body>
     <div id="Container1">
         <div>
-            <img id="titulo" src="/ReStitch/imagenes/nombre.png" width="340px" height="130px">
+            <img id="titulo" src="../imagenes/nombre.png" width="340px" height="130px">
         </div>
         <div class="Container">
-            <form action="/procesar-datos" method="post">
+            <form onsubmit="sendMail(); return false;">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
+
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
+
                 <br>
+
                 <label for="comentario">Comentario:</label>
-                <input id="comentario" type="text" id="comentario" name="comentario" required>
+                <input type="text" id="comentario" name="comentario" required>
+
+                <button type="submit">Enviar comentario</button>
             </form>
-            <button type="submit" onclick="sendMail()">Enviar comentario</button>
         </div>
     </div>
 
