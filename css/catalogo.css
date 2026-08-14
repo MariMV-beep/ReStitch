@@ -15,6 +15,40 @@ body {
   background-attachment: fixed;
 }
 
+header {
+  height: 60px;
+  width: auto;
+  background-color: rgb(30, 24, 42);
+  -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+#textoH {
+  padding-top: 2.5px;
+  display: inline-flex;
+  padding-right: 30px;
+  text-decoration: none;
+  color: rgb(206, 191, 233);
+  gap: 6px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#textoH:hover {
+  color: rgb(184, 119, 198);
+  transform: rotate(5deg);
+}
+
+#logoH {
+  padding-top: 2.5px;
+  height: 50px;
+  padding-right: 0;
+}
+
+#set {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
 a {
   cursor: url(imagenes/cursorH.png), auto;
 }
@@ -42,7 +76,14 @@ a {
   background: rgba(160, 90, 210, 0.42);
   border-radius: 20px;
   padding: 20px 18px 18px;
-  border: 1px solid rgba(200, 150, 255, 0.15);
+  overflow: hidden;
+  /* Efecto glassmorphism */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(235, 227, 227, 0.156);
+  box-shadow: 
+    0 8px 32px rgba(31, 38, 135, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 .title {
   font-family: "UnifrakturMaguntia", cursive;
@@ -53,9 +94,15 @@ a {
   text-shadow: 2px 4px 16px rgba(0, 0, 0, 0.6);
 }
 .inner-card {
-  background: rgba(100, 50, 160, 0.48);
+  background: rgba(199, 197, 201, 0.48);
   border-radius: 14px;
   padding: 16px 12px 14px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 32px rgba(31, 38, 135, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 .stage {
   display: flex;
@@ -173,4 +220,116 @@ a {
 }
 .ver-btn:active {
   transform: scale(0.96);
+}
+
+.dots{ flex-wrap: wrap; row-gap:6px; max-width: 60%; }
+
+/* Slide central seleccionable*/
+.s-center{
+  cursor: pointer;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.25), 0 14px 22px rgba(0,0,0,0.35);
+}
+.s-center:hover{
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 0 rgba(0,0,0,0.22), 0 20px 28px rgba(0,0,0,0.4);
+}
+.s-center.selected{
+  box-shadow:
+    0 6px 0 rgba(150,100,0,0.4),
+    0 16px 24px rgba(0,0,0,0.4),
+    0 0 0 3px #f4d35e;
+}
+.s-center.selected::after{
+  content:"✓ elegido";
+  position:absolute;
+  bottom:8px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#f4d35e;
+  color:#1c0d00;
+  font-size:11px;
+  font-weight:800;
+  padding:3px 10px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+.s-left, .s-right{
+  opacity:0.75;
+}
+
+/* Nombre del bolso bajo el carrusel */
+.fabric-name{
+  text-align:center;
+  color:#fff;
+  font-weight:700;
+  margin-top:10px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Título secundario*/
+.sizes-title{
+  font-size: clamp(1.6rem, 6vw, 2.2rem);
+  margin-top: 22px;
+}
+
+/* PLACE HOLDER OCUPO QUITAR ESTA SHIT DIOS MIO QUE FEOS LO PROMETO LAS FOTOS SON MAS LINDAS 😭😭😭😭😭😭 */
+.p1{ background-image:url('../imagenes/patron1.jpg'); background-size:cover; background-position:center; }
+.p2{ background-image:url('../imagenes/patron2.jpg'); background-size:cover; background-position:center; }
+.p3{ background-image:url('../imagenes/patron3.jpg'); background-size:cover; background-position:center; }
+.p4{ background-image:url('../imagenes/patron4.jpg'); background-size:cover; background-position:center; }
+.p5{ background-image:url('../imagenes/patron5.jpg'); background-size:cover; background-position:center; }
+.p6{ background-image:url('../imagenes/patron1.jpg'); background-size:cover; background-position:center; }
+.p7{ background-image:url('../imagenes/patron2.jpg'); background-size:cover; background-position:center; }
+.p8{ background-image:url('../imagenes/patron3.jpg'); background-size:cover; background-position:center; }
+.p9{ background-image:url('../imagenes/patron4.jpg'); background-size:cover; background-position:center; }
+.p10{ background-image:url('../imagenes/patron5.jpg'); background-size:cover; background-position:center; }
+.p11{ background-image:url('../imagenes/patron1.jpg'); background-size:cover; background-position:center; }
+.p12{ background-image:url('../imagenes/patron2.jpg'); background-size:cover; background-position:center; }
+.p13{ background-image:url('../imagenes/patron3.jpg'); background-size:cover; background-position:center; }
+.p14{ background-image:url('../imagenes/patron4.jpg'); background-size:cover; background-position:center; }
+.p15{ background-image:url('../imagenes/patron5.jpg'); background-size:cover; background-position:center; }
+.p16{ background-image:url('../imagenes/patron1.jpg'); background-size:cover; background-position:center; }
+.p17{ background-image:url('../imagenes/patron2.jpg'); background-size:cover; background-position:center; }
+.p18{ background-image:url('../imagenes/patron3.jpg'); background-size:cover; background-position:center; }
+
+/* Fila de muestras de tela (swatches) */
+.swatch-row{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap:8px;
+}
+.swatch{
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.swatch:hover{
+  transform: translateY(-2px) scale(1.05);
+}
+.swatch.selected{
+  border-color: #f4d35e;
+  box-shadow: 0 0 0 3px rgba(244,211,94,0.5);
+  transform: scale(1.08);
+}
+
+/* Vista previa de la tela elegida */
+.tela-preview{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:14px;
+}
+.tela-preview-swatch{
+  width:48px;
+  height:48px;
+  border-radius:10px;
+  border: 2px solid rgba(255,255,255,0.6);
+  flex-shrink:0;
+}
+.tela-preview-name{
+  color:#1c0d00;
+  font-weight:800;
 }

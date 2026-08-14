@@ -4,20 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../imagenes/logo.png" type="image/png" />
-    <title>Boslos Pre-Hechos</title>
+    <title>Bolsos Pre-Hechos</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap"
+      href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Baloo+2:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/catalogo.css" />
   </head>
 
+  <header>
+    <section id="set">
+        <div>
+            <img id="logoH" src="../imagenes/logo.png">
+        </div>
+        <div>
+            <h3>
+                <lo><a id="textoH" href="../ReStitch/index.html">Inicio</a><a id="textoH"
+                        href="../ReStitch/html/catalogo.html">Catálogo</a> <a id="textoH"
+                        href="../ReStitch/html/comentarios.html">Contacto</a></lo>
+            </h3>
+        </div>
+    </section>
+</header>
+
   <body>
-    <!--Carousel-->
     <div class="page">
       <button class="info-btn">Info</button>
+
       <div class="outer-card">
-        <div class="title">Boslos Pre Hechos</div>
+        <h1 class="title">Bolsos Pre Hechos</h1>
+
+        <!-- Carrusel de bolsos (mismo patrón que el carrusel de telas) -->
         <div class="inner-card">
           <div class="stage" id="stage"></div>
           <div class="controls">
@@ -25,20 +42,25 @@
             <div class="dots" id="dots"></div>
             <button class="arr" id="next">&#8594;</button>
           </div>
+          <p class="fabric-name" id="bagName"></p>
         </div>
+
+        <!-- Selector de tela -->
+        <h2 class="title sizes-title">Selecciona tu tela!</h2>
+
+        <div class="inner-card">
+          <div class="swatch-row" id="swatchRow"></div>
+          <div class="tela-preview">
+            <div class="tela-preview-swatch" id="telaPreviewSwatch"></div>
+            <p class="tela-preview-name" id="telaPreviewName">Elige una tela</p>
+          </div>
+        </div>
+
         <div class="bottom">
-          <button class="ver-btn">Ver más</button>
+          <button class="ver-btn" id="verBtn">Elegir este bolso</button>
         </div>
       </div>
     </div>
-
-    <!--Menu seleccion-->
-<div class="Ocard">
-  <div class="title">Seleciona tu tela!></div>
-    <div class="tamañoR">
-      <div class="preview"></div>
-    </div>
-   </div>
 
     <script src="../js/catalogo.js"></script>
   </body>
